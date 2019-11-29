@@ -1,0 +1,152 @@
+/*
+variables generales
+*/
+:root{
+    --main-color: #ED1C24;
+    --border-width: .24vw;
+    --gutter: 2vw;
+}
+.figure{
+    display: flex;
+    flex-direction: column;
+}
+/*
+style for heros
+*/
+.hero-img{
+    object-fit: cover;
+    clip-path: 
+        polygon(
+            var(--border-width) var(--border-width),
+            calc(100% - var(--border-width)) var(--border-width),
+            calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+            var(--border-width) calc(100% - var(--border-width))
+        );
+        clip-path: 
+            polygon(
+                var(--border-width) var(--border-width),
+                calc(100% - var(--border-width)) var(--border-width),
+                calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+                var(--border-width) calc(100% - var(--border-width))
+            );
+        flex-grow: 1;
+}
+/* 
+Ms. Marvel wrap clip 
+*/
+.clip-1 { 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 85%);
+    background:#ea1821;
+}
+/* 
+Ms. Marvel image clip
+*/
+.clip-1-img {
+  -webkit-clip-path:
+    polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(66% - var(--border-width)),
+      var(--border-width) calc(85% - var(--border-width))
+    );
+          clip-path:
+    polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(66% - var(--border-width)),
+      var(--border-width) calc(85% - var(--border-width))
+    );
+	}
+  /* 
+  Black Panther wrap clip 
+  */
+  .clip-2 { 
+  	-webkit-clip-path: polygon(0 22%, 100% 4px, 100% 100%, 0% 100%);
+          clip-path: polygon(0 22%, 100% 4px, 100% 100%, 0% 100%);
+  }
+  /* 
+  Black Panther image clip 
+  */
+  .clip-2-img { 
+  	  -webkit-clip-path:
+    polygon(
+      var(--border-width) calc(22% + var(--border-width)),
+      calc(100% - var(--border-width)) 7px,
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+          clip-path:
+    polygon(
+      var(--border-width) calc(22% + var(--border-width)),
+      calc(100% - var(--border-width)) 7px,
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+  }
+  /* 
+  Thor wrap clip 
+  */
+  .clip-3 { 
+  -webkit-clip-path: polygon(0 0,100% 0,88% 100%,0% 100%);
+          clip-path: polygon(0 0,100% 0,88% 100%,0% 100%);
+  }
+  /* 
+  Thor image clip 
+  */
+  .clip-3-img { 
+  -webkit-clip-path:
+    polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(88% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+          clip-path:
+    polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(88% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+  }
+  /* 
+  Cpt. America wrap clip 
+  */
+  .clip-4{
+  	-webkit-clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  /* 
+  Cpt. America image clip 
+  */
+  .clip-4-img{ 
+  	-webkit-clip-path:
+    polygon(
+      calc(12% + var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+          clip-path:
+    polygon(
+      calc(12% + var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+  }
+/* 
+This takes care of proper drawing of borders of clipped images 
+*/
+.img{ 
+  object-fit: cover;
+  transition: .2s;
+  clip-path:
+    polygon(
+      var(--border-width) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+    );
+}
